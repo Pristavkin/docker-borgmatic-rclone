@@ -56,7 +56,8 @@ COPY requirements.txt /
 
 ## Copy rclone binary
 COPY --from=builder /go/bin/rclone /usr/local/bin/
-RUN rclone version
+RUN rclone version && \
+    rclone genautocomplete bash /usr/share/bash-completion/completions/rclone
 
 RUN python3 -m pip install --no-cache -Ur requirements.txt
 RUN borgmatic --bash-completion > /usr/share/bash-completion/completions/borgmatic && echo "source /etc/bash/bash_completion.sh" > /root/.bashrc
