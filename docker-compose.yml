@@ -1,7 +1,7 @@
 version: '3'
 services:
   borgmatic:
-    image: ghcr.io/borgmatic-collective/borgmatic
+    image: ghcr.io/pristavkin/docker-borgmatic-rclone:latest
     container_name: borgmatic
     volumes:
       - ${VOLUME_SOURCE}:/mnt/source:ro            # backup source
