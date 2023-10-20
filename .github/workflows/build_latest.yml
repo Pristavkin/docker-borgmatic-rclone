@@ -26,13 +26,13 @@ jobs:
             type=raw,value=latest,enable={{is_default_branch}}
 
       - name: Set up QEMU
-        uses: docker/setup-qemu-action@latest
+        uses: docker/setup-qemu-action@master
         with:
           platforms: all
 
       - name: Set up Docker Buildx
         id: buildx
-        uses: docker/setup-buildx-action@latest
+        uses: docker/setup-buildx-action@master
 
       - name: Login to GitHub Container Registry
         if: github.event_name != 'pull_request'
