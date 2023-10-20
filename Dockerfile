@@ -14,7 +14,7 @@ RUN /go/bin/rclone version
 
 ## final image build stage
 ## Original docker-borgmatic Dockerfile
-FROM python:3.12.0-alpine3.18
+FROM python:3.11.5-alpine3.18
 LABEL maintainer='github.com/Pristavkin/docker-borgmatic-rclone'
 LABEL org.opencontainers.image.description "borgmnatic-rclone docker image"
 VOLUME /mnt/source
