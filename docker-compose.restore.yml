@@ -7,7 +7,7 @@ services:
       - SYS_ADMIN
 
     volumes:
-      - /host/mount/location:/restore
+      - ${VOLUME_RESTORE}:/mnt/borg-restore
 
     security_opt:
       - apparmor:unconfined

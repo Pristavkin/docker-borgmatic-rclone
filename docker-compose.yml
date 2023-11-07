@@ -16,3 +16,4 @@ services:
     environment:
       - TZ=${TZ}
       - BORG_PASSPHRASE=${BORG_PASSPHRASE}
+      - RUN_ON_STARTUP=${RUN_ON_STARTUP}
