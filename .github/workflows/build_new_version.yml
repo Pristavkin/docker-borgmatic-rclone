@@ -18,7 +18,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            ghcr.io/Pristavkin/docker-borgmatic-rclone
+            ghcr.io/pristavkin/borgmatic-rclone
           tags: |
             type=ref,event=branch
             type=ref,event=pr
