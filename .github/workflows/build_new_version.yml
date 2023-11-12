@@ -1,5 +1,5 @@
 ---
-name: 'Build Docker Images :$version'
+name: 'Build Docker Images :version [date tag]'
 
 on:
   push:

@@ -1,5 +1,5 @@
 ---
-name: 'Build Docker Images :latest'
+name: 'Build Docker Images :latest [latest branch]'
 
 on:
   push:
