@@ -38,7 +38,7 @@ docker run \
   -v ./data/.ssh:/root/.ssh \
   -v ./data/.cache/borg:/root/.cache/borg \
   -e TZ=Europe/Berlin \
-  ghcr.io/pristavkin/docker-borgmatic-rclone
+  ghcr.io/pristavkin/borgmatic-rclone
 ```
 
 See [Other usage methods](#other-usage-methods) below for more options.
@@ -192,7 +192,7 @@ To execute borgmatic commands, you can run your container by passing borgmatic s
 ```
 docker run --rm -it \
 MOUNT_FLAGS_HERE \
-ghcr.io/pristavkin/docker-borgmatic-rclone \
+ghcr.io/pristavkin/borgmatic-rclone \
 list
 ```
 
@@ -204,7 +204,7 @@ This will execute `borgmatic list` in your container. The idea is to create syml
 
 docker run --rm -it \
 MOUNT_FLAGS_HERE \
-ghcr.io/pristavkin/docker-borgmatic-rclone \
+ghcr.io/pristavkin/borgmatic-rclone \
 "$@"
 ```
 Modify the above script as per your needs and copy it's path. Now you can either create a symbolic link to this script or add it as alias.
@@ -228,7 +228,7 @@ To keep the container always running for continous backup, you can run it in det
 ```
 docker run -d --restart=always \
 MOUNT_FLAGS_HERE \
-ghcr.io/pristavkin/docker-borgmatic-rclone \
+ghcr.io/pristavkin/borgmatic-rclone \
 ```
 
 If you ever need to run borgmatic manually, for instance to view or recover files, run:

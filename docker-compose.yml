@@ -1,7 +1,7 @@
 version: '3'
 services:
   borgmatic:
-    image: ghcr.io/pristavkin/docker-borgmatic-rclone:latest
+    image: ghcr.io/pristavkin/borgmatic-rclone:latest
     container_name: borgmatic
     hostname: ${HOSTNAME}
     volumes:
