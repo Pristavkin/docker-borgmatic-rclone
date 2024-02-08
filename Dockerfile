@@ -13,7 +13,7 @@ RUN \
 RUN /go/bin/rclone version
 
 ## borgbackup build
-FROM python:3.11.5-alpine3.18 AS python_builder
+FROM python:3.12.2-alpine3.18 AS python_builder
 
 RUN apk add --update --no-cache \
     # Runtime dependencies 
@@ -52,7 +52,7 @@ RUN pip wheel --wheel-dir=/wheel -r /requirements.txt
 
 ## final image build stage
 ## Original docker-borgmatic Dockerfile
-FROM python:3.11.5-alpine3.18
+FROM python:3.12.2-alpine3.18
 LABEL maintainer='github.com/Pristavkin/docker-borgmatic-rclone'
 LABEL org.opencontainers.image.description "borgmnatic-rclone docker image"
 VOLUME /mnt/source
